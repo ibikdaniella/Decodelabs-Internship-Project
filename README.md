@@ -1,133 +1,198 @@
-Sales Data Analysis Project
+Exploratory Data Analysis (EDA) – E-Commerce Dataset
 
 Project Overview
 
-This project focuses on the analysis and preparation of an e-commerce/retail sales dataset for data analytics.
+This project performs Exploratory Data Analysis (EDA) on a cleaned e-commerce dataset using Microsoft SQL Server and SQL Server Management Studio (SSMS).
 
-The dataset contains customer orders, products, prices, payment methods, order statuses, promotional information, referral sources, and other transaction details. The cleaned dataset is prepared for further analysis using Microsoft Excel..
+The goal is to explore the dataset, calculate descriptive statistics, identify trends and potential outliers, and summarize important business insights.
 
-Dataset Description:
+Objectives
 
-The dataset contains 1,200 sales order records covering transactions from 2023 to 2025.
+• Calculate descriptive statistics such as count, mean, median, minimum, and maximum.
+• Analyze product and sales performance.
+• Identify sales trends over time.
+• Examine order status, payment methods, coupons, and referral sources.
+• Identify potential outliers using the IQR method.
+• Summarize key business observations and recommendations.
 
-Key fields include:
+Dataset
 
-* OrderID – Unique identifier for each order
-* Date – Date the order was placed
-* CustomerID – Identifier for the customer
-* Product – Product purchased
-* Quantity – Number of units purchased
-* UnitPrice – Price per unit
-* ShippingAddress – Customer shipping location
-* PaymentMethod – Method used for payment
-* OrderStatus – Current status of the order
-* TrackingNumber – Shipment tracking reference
-* ItemsInCart – Number of items in the customer’s cart
-* CouponCode – Promotional coupon used
-* ReferralSource – Source through which the customer was referred
-* TotalPrice – Total value of the order
+The dataset contains 1,200 e-commerce orders and 14 columns:
 
-Data Cleaning:
+|Column           |Description                           |
+|-----------------|--------------------------------------|
+|`OrderID`        |Unique order identifier               |
+|`Date`           |Date the order was placed             |
+|`CustomerID`     |Customer identifier                   |
+|`Product`        |Product purchased                     |
+|`Quantity`       |Number of units purchased             |
+|`UnitPrice`      |Price per unit                        |
+|`ShippingAddress`|Customer shipping address             |
+|`PaymentMethod`  |Payment method used                   |
+|`OrderStatus`    |Current order status                  |
+|`TrackingNumber` |Shipment tracking number              |
+|`ItemsInCart`    |Number of items in the customer’s cart|
+|`CouponCode`     |Coupon or discount code used          |
+|`ReferralSource` |Customer referral/acquisition source  |
+|`TotalPrice`     |Total value of the order              |
 
-The dataset was reviewed and prepared for analysis.
+Tools Used
 
-The cleaning process included checking for:
+• Microsoft SQL Server
+• SQL Server Management Studio (SSMS)
+• Microsoft Excel
 
-* Missing or null values.
-* Duplicate records.
-* Invalid negative values.
-* Incorrect data formats.
-* Total price calculations.
-* Consistency of categorical fields.
+Analysis Performed
 
-According to the cleaning summary, the dataset contained 1,200 original rows, with no duplicate rows or invalid negative-value rows removed. The final dataset contains 1,200 rows.
+1. Data Validation
 
-The TotalPrice field represents the calculated value of an order based on the quantity and unit price.
+The SQL analysis checks:
 
-Tools Used:
+• Total number of records
+• Date range
+• Missing/null values
+• Duplicate Order IDs
+• Data completeness
 
-* Microsoft Excel – Data cleaning and preparation.
-* GitHub – Project version control and documentation.
+2. Descriptive Statistics
 
-Potential Analysis:
+Statistics were calculated for key numerical fields, including:
 
-The dataset can be used to investigate several business questions, including:
+• Total orders
+• Unique customers
+• Total units sold
+• Total revenue
+• Average order value
+• Median order value
+• Minimum and maximum order values
+• Quantity statistics
+• Unit price statistics
+• Items-in-cart statistics
 
-Sales Performance
+3. Product Analysis
 
-* What is the total sales revenue?
-* Which products generate the highest revenue?
-* What are the monthly and yearly sales trends?
-* What is the average order value?
+Products were compared using:
 
-Product Analysis
+• Number of orders
+• Units sold
+• Revenue
+• Average order value
 
-* Which products are purchased most frequently?
-* Which products generate the most revenue?
-* What is the average quantity purchased per product?
+The highest-revenue products include Chair, Printer, Laptop, Tablet, and Monitor.
 
-Customer Analysis
+4. Sales Trend Analysis
 
-* How many unique customers are represented?
-* Which customers have the highest order values?
-* What purchasing patterns can be identified?
+Sales were analyzed by year, month, and day to identify periods of higher or lower activity.
 
-Order Status Analysis
+The dataset covers January 2023 through June 2025. Since 2025 contains only part of the year, its total should not be compared directly with the complete 2023 and 2024 years.
 
-* How many orders were delivered?
-* How many orders were cancelled?
-* How many orders were returned?
-* What percentage of orders are still pending or shipped?
+5. Order Status Analysis
 
-Marketing Analysis
+Orders were grouped by:
 
-* Which referral source generates the most orders?
-* Which coupon codes are used most frequently?
-* How do different promotional campaigns affect sales?
+• Delivered
+• Shipped
+• Pending
+• Returned
+• Cancelled
 
-Payment Analysis
+A notable finding is that 497 orders were either cancelled or returned, representing approximately 41.4% of all orders.
 
-* Which payment method is most commonly used?
-* What is the revenue generated through each payment method?
+6. Payment Method Analysis
+
+Revenue and order volume were compared across payment methods.
+
+Credit Card generated the highest revenue among the payment methods in the dataset.
+
+7. Referral Source Analysis
+
+Customer acquisition was analyzed by referral source.
+
+Instagram was the highest-revenue referral source, generating approximately ₦275,285.
+
+8. Coupon Analysis
+
+Coupon codes were compared by order count and revenue.
+
+FREESHIP was the strongest coupon by revenue, generating approximately ₦335,037.
+
+9. Customer Analysis
+
+Customers were analyzed based on:
+
+• Number of orders
+• Units purchased
+• Total amount spent
+
+The dataset contains 1,189 unique customers across 1,200 orders.
+
+10. Outlier Analysis
+
+The Interquartile Range (IQR) method was used to identify unusually high order values.
+
+The analysis calculates:
+
+• Q1 (25th percentile)
+• Q3 (75th percentile)
+• IQR
+• Lower bound
+• Upper bound
+
+Orders above the upper IQR boundary were flagged as potential high-value outliers for further investigation.
+
+Key Findings
+
+• Total Orders: 1,200
+• Unique Customers: 1,189
+• Total Units Sold: 3,535
+• Total Revenue: approximately ₦1.26 million
+• Average Order Value: approximately ₦1,053.97
+• Median Order Value: approximately ₦823.62
+• Highest-Revenue Product: Chair
+• Top Referral Source: Instagram
+• Top Coupon by Revenue: FREESHIP
+• Top Payment Method by Revenue: Credit Card
+• Cancelled/Returned Orders: 497 (approximately 41.4%)
+• Highest Monthly Revenue: June 2024, approximately ₦68,069
+
+Business Recommendations
+
+1. Investigate the high cancellation and return rate to identify the main causes.
+2. Continue monitoring Instagram as a strong customer acquisition channel.
+3. Evaluate the performance and profitability of promotional coupons, especially FREESHIP.
+4. Investigate high-value outliers to determine whether they are genuine transactions or data-quality issues.
+5. Monitor monthly sales trends to identify seasonal opportunities.
+6. Develop customer-retention strategies because unique customers are close to total orders, suggesting limited repeat purchasing.
 
 Project Structure
 
-Internship-Project/
+```text
+E-Commerce-EDA/
 │
 ├── README.md
-│
-├── Dataset/
-│   └── Cleaned_Dataset_for_Data_Analytics.xlsx
-│
-├── SQL/
-│   └── analysis_queries.sql
-│
-├── PowerBI/
-│   └── sales_dashboard.pbix
-│
-└── Images/
-    └── dashboard_screenshot.png
+├── Cleaned_Dataset_for_Data_Analytics.xlsx
+└── EDA_SQL_Analysis.sql
+```
 
-Expected Outcomes
+How to Run
 
-The analysis of this dataset can provide insights into:
+1. Install SQL Server and SQL Server Management Studio (SSMS).
+2. Create the ECommerce_EDA database.
+3. Create the Orders table using the SQL script.
+4. Import the cleaned Excel data into the Orders table.
+5. Open EDA_SQL_Analysis.sql in SSMS.
+6. Execute the queries section by section.
+7. Review the results for statistics, trends, product performance, and outliers.
 
-* Overall sales performance
-* Product performance
-* Customer purchasing behavior
-* Order fulfillment and returns
-* Payment preferences
-* Marketing and referral performance
-* Promotional campaign effectiveness
+Conclusion
 
-These insights can be presented through an interactive Power BI dashboard to support data-driven business decisions.
+This project demonstrates how SQL Server can be used for exploratory data analysis, descriptive statistics, trend analysis, customer analysis, and outlier detection.
 
-Author
+The results provide useful insights into e-commerce revenue, product performance, customer behavior, marketing channels, payment methods, and order fulfillment.
 
-Mmesoma Jennifer Ibik
+────────
 
-Data Analytics Intern
-
-⸻
-
-This project was developed as part of a data analytics internship project and demonstrates skills in data cleaning, analysis and reporting.
+Project Type: Exploratory Data Analysis (EDA)
+Database: SQL Server
+Analysis Tool: SQL Server Management Studio (SSMS)
+Dataset: Cleaned E-Commerce Dataset
