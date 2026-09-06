@@ -1,133 +1,82 @@
-Sales Data Analysis Project
+Project 4: Data Visualization
+
+E-Commerce Sales Analysis & Insights
+
+---
 
 Project Overview
 
-This project focuses on the analysis and preparation of an e-commerce/retail sales dataset for data analytics.
+This project focuses on creating clear and meaningful visual representations of e-commerce order data to communicate key business insights.
 
-The dataset contains customer orders, products, prices, payment methods, order statuses, promotional information, referral sources, and other transaction details. The cleaned dataset is prepared for further analysis using Microsoft Excel..
+Goal: 
+Create visual representations of data to communicate insights clearly.
 
-Dataset Description:
+Key Requirements:
+- Create charts (bar, line, pie, etc.)
+- Choose appropriate visuals for the data
+- Highlight key insights
 
-The dataset contains 1,200 sales order records covering transactions from 2023 to 2025.
+Key Skills Demonstrated:
+Data visualization, charts, storytelling with data
 
-Key fields include:
+---
 
-* OrderID – Unique identifier for each order
-* Date – Date the order was placed
-* CustomerID – Identifier for the customer
-* Product – Product purchased
-* Quantity – Number of units purchased
-* UnitPrice – Price per unit
-* ShippingAddress – Customer shipping location
-* PaymentMethod – Method used for payment
-* OrderStatus – Current status of the order
-* TrackingNumber – Shipment tracking reference
-* ItemsInCart – Number of items in the customer’s cart
-* CouponCode – Promotional coupon used
-* ReferralSource – Source through which the customer was referred
-* TotalPrice – Total value of the order
+#Dataset
 
-Data Cleaning:
+File: `Cleaned_Dataset_for_Data_Analytics.xlsx`
 
-The dataset was reviewed and prepared for analysis.
+- Rows: 1,200 cleaned orders
+- Columns:
+  - OrderID, Date, CustomerID, Product, Quantity, UnitPrice
+  - ShippingAddress, PaymentMethod, OrderStatus, TrackingNumber
+  - ItemsInCart, CouponCode, ReferralSource, TotalPrice
 
-The cleaning process included checking for:
+The dataset was cleaned before analysis (no duplicates or invalid values).
 
-* Missing or null values.
-* Duplicate records.
-* Invalid negative values.
-* Incorrect data formats.
-* Total price calculations.
-* Consistency of categorical fields.
+---
 
-According to the cleaning summary, the dataset contained 1,200 original rows, with no duplicate rows or invalid negative-value rows removed. The final dataset contains 1,200 rows.
+Technologies Used
 
-The TotalPrice field represents the calculated value of an order based on the quantity and unit price.
+- Python
+- Pandas – Data loading and analysis
+- Matplotlib – Data visualization
+- Thonny – Development environment
 
-Tools Used:
+---
 
-* Microsoft Excel – Data cleaning and preparation.
-* GitHub – Project version control and documentation.
+Visualizations Included
 
-Potential Analysis:
+1. Total Revenue by Product (Bar Chart)
+2. Number of Orders by Product (Bar Chart)
+3. Payment Method Distribution (Pie Chart)
+4. Order Status Distribution (Pie Chart)
+5. Monthly Sales Revenue Over Time (Line Chart)
+6. Total Sales by Referral Source (Bar Chart)
 
-The dataset can be used to investigate several business questions, including:
+---
 
-Sales Performance
+How to Run the Project
 
-* What is the total sales revenue?
-* Which products generate the highest revenue?
-* What are the monthly and yearly sales trends?
-* What is the average order value?
+1. Clone this repository or download the files.
+2. Make sure you have the following installed:
+   - Python 3.x
+   - pandas
+   - matplotlib
+3. Place the Excel file (Cleaned_Dataset_for_Data_Analytics.xlsx) in the same folder as the script.
+4. Open the Python script in Thonny (or any Python IDE).
+5. Update the file path in the script if needed.
+6. Run the script (F5 in Thonny).
 
-Product Analysis
+All charts will be displayed one by one, and key insights will be printed in the console.
 
-* Which products are purchased most frequently?
-* Which products generate the most revenue?
-* What is the average quantity purchased per product?
+Key Insights
 
-Customer Analysis
-
-* How many unique customers are represented?
-* Which customers have the highest order values?
-* What purchasing patterns can be identified?
-
-Order Status Analysis
-
-* How many orders were delivered?
-* How many orders were cancelled?
-* How many orders were returned?
-* What percentage of orders are still pending or shipped?
-
-Marketing Analysis
-
-* Which referral source generates the most orders?
-* Which coupon codes are used most frequently?
-* How do different promotional campaigns affect sales?
-
-Payment Analysis
-
-* Which payment method is most commonly used?
-* What is the revenue generated through each payment method?
-
-Project Structure
-
-Internship-Project/
-│
-├── README.md
-│
-├── Dataset/
-│   └── Cleaned_Dataset_for_Data_Analytics.xlsx
-│
-├── SQL/
-│   └── analysis_queries.sql
-│
-├── PowerBI/
-│   └── sales_dashboard.pbix
-│
-└── Images/
-    └── dashboard_screenshot.png
-
-Expected Outcomes
-
-The analysis of this dataset can provide insights into:
-
-* Overall sales performance
-* Product performance
-* Customer purchasing behavior
-* Order fulfillment and returns
-* Payment preferences
-* Marketing and referral performance
-* Promotional campaign effectiveness
-
-These insights can be presented through an interactive Power BI dashboard to support data-driven business decisions.
+- Identifies the highest revenue-generating products
+- Shows the most popular payment methods
+- Highlights order status distribution (including cancelled/returned orders)
+- Reveals sales trends over time
+- Identifies the best-performing referral sources
 
 Author
-
-Mmesoma Jennifer Ibik
-
-Data Analytics Intern
-
-⸻
-
-This project was developed as part of a data analytics internship project and demonstrates skills in data cleaning, analysis and reporting.
+Ibik Mmesoma Jennifer
+Data Analyst
