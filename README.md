@@ -192,7 +192,8 @@ The results provide useful insights into e-commerce revenue, product performance
 
 ────────
 
-Project Type: Exploratory Data Analysis (EDA)
-Database: SQL Server
-Analysis Tool: SQL Server Management Studio (SSMS)
-Dataset: Cleaned E-Commerce Dataset
+Author
+
+ibik Mmesoma Jennifer
+
+Data Analyst
