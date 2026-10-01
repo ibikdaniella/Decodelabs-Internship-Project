@@ -104,13 +104,12 @@ Skills Demonstrated
 
 Suggested Repository Structure
 
-```text
 SQL-Data-Analysis-Project-3/
 │
 ├── README.md
 ├── Cleaned_Dataset_for_Data_Analytics(1).xlsx
 └── SQL_Data_Analysis_Project_3.sql
-```
+
 
 Conclusion
 
@@ -120,5 +119,8 @@ It also improved my ability to connect SQL queries with real-world analytical qu
 
 ────────
 
-Project: SQL Data Analysis – Project 3
-Focus: Sales Data Analysis using SQL
+Author
+
+Ibik Mmesoma Jennifer
+
+Data Analyst
