@@ -2,7 +2,7 @@ Project 4: Data Visualization
 
 E-Commerce Sales Analysis & Insights
 
----
+
 
 Project Overview
 
@@ -19,9 +19,9 @@ Key Requirements:
 Key Skills Demonstrated:
 Data visualization, charts, storytelling with data
 
----
 
-#Dataset
+
+Dataset
 
 File: `Cleaned_Dataset_for_Data_Analytics.xlsx`
 
@@ -33,7 +33,7 @@ File: `Cleaned_Dataset_for_Data_Analytics.xlsx`
 
 The dataset was cleaned before analysis (no duplicates or invalid values).
 
----
+
 
 Technologies Used
 
@@ -53,7 +53,7 @@ Visualizations Included
 5. Monthly Sales Revenue Over Time (Line Chart)
 6. Total Sales by Referral Source (Bar Chart)
 
----
+
 
 How to Run the Project
 
@@ -78,5 +78,6 @@ Key Insights
 - Identifies the best-performing referral sources
 
 Author
+
 Ibik Mmesoma Jennifer
 Data Analyst
